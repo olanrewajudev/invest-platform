@@ -1,18 +1,8 @@
-import Swal from 'sweetalert2'
-import { toast } from 'react-toastify'
-import { Typewriter, Cursor } from 'react-simple-typewriter'
+// import { toast } from 'react-toastify'
+import toast from 'react-hot-toast';
 
-
-export const SwalAlert = (title, text, icon) => {
-    return Swal.fire({
-        title,
-        text,
-        icon,
-        showConfirmButton: false
-    })
-}
 export const ToastAlert = (message) => {
-    toast.success('message', {
+    toast.success(message, {
         position: "top-center",
         autoClose: 500,
         hideProgressBar: true,
@@ -24,7 +14,7 @@ export const ToastAlert = (message) => {
     });
 }
 export const ErrorAlert = (message) => {
-    toast.error('message', {
+    toast.error(message, {
         position: "top-center",
         autoClose: 500,
         hideProgressBar: true,
@@ -35,4 +25,15 @@ export const ErrorAlert = (message) => {
         theme: "light",
     });
 }
-
+export const HotAlert = (message) => {
+    toast.success(message,
+        {
+            icon: '👏',
+            style: {
+                borderRadius: '10px',
+                background: '#333',
+                color: '#fff',
+            },
+        }
+    );
+}

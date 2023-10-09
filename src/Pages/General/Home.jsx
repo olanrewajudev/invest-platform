@@ -10,13 +10,17 @@ import { PiArrowsCounterClockwise, PiClock } from 'react-icons/pi'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import Layouts from '../../Components/General/Layouts'
 import { useState } from 'react'
-import logo from '../../assets/Untitled-1-removebg-preview.png'
+import logo from '../../assets/logo.svg'
 import { Link } from 'react-router-dom'
-import { FaBars, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import { BiSupport } from 'react-icons/bi'
 import { BsGraphUpArrow } from 'react-icons/bs'
 import { AiOutlineTransaction } from 'react-icons/ai'
 import Navbar from '../../Components/General/Navbar'
+import member2 from '../../assets/member2.jpg'
+import member3 from '../../assets/member3.jpg'
+import member4 from '../../assets/member4.jpg'
+import member5 from '../../assets/member1.jpg'
 
 const links = [
     {
@@ -60,22 +64,22 @@ const achieve = [
 ]
 const team = [
     {
-        icon: "https://cryptosville.org/asset2/img/member/2.jpg",
+        icon: member2,
         title: 'Head of Design',
         name: 'Katy Abrams',
     },
     {
-        icon: 'https://cryptosville.org/asset2/img/member/3.jpg',
+        icon: member3,
         title: 'Product Manager',
         name: 'Tom Binegar',
     },
     {
-        icon: 'https://cryptosville.org/asset2/img/member/4.jpg',
+        icon: member5,
         title: 'Software Engineer',
         name: 'Jackson Alexander',
     },
     {
-        icon: 'https://cryptosville.org/asset2/img/member/1.jpg',
+        icon: member4,
         title: 'Business Development',
         name: 'Austin Barth',
     },
@@ -121,7 +125,7 @@ const Home = () => {
     const handleView = () => {
         setView(!view)
     }
-    const Cs = 'text-gray-300 font-sembold hover:text-blue-800 py-2 text-sm'
+    const Cs = 'text-blue-800 font-sembold hover:text-gray-400 py-2 text-sm'
     const [typeEffect] = useTypewriter({
         words: [`Unlock Wealth. `, 'Financial Privacy.', 'Inflation Hedge.', 'Store of Value.'],
         loop: {},
@@ -138,22 +142,21 @@ const Home = () => {
                         <div className='bg-gradient-to-r from-blue-800 to-cyan-500'>
                             <div className={`fixed w-full z-10 top-0 ${scroll ? "bg-gray-100 shadow-lg border-b" : " "}`}>
                                 <div className="flex items-center z-50 justify-between mx-10 py-5">
-                                    <img src={logo} alt="" className="lg:w-[12rem] w-32 " />
+                                    <Link to='/' className=''> <img src={logo} alt="" className="lg:w-[12rem] w-32 " /> </Link>
                                     <div className="lg:flex hidden gap-5">
-                                        <Link to='' className={`${Cs}`}>Home</Link>
-                                        <Link to='' className={`${Cs}`}>Team</Link>
-                                        <Link to='' className={`${Cs}`}>Investment Plans</Link>
-                                        <Link to='' className={`${Cs}`}>About Us</Link>
-                                        <Link to='' className={`${Cs}`}>Contact Us</Link>
-                                        <Link to='' className={`${Cs}`}>Login</Link>
-                                        <Link to='' className={`${Cs} border border-blue-300 w-20 rounded-xl text-center h-10 py-2 shadow-md transition duration-300 ease-in-out transform hover:scale-105`}>Sign Up</Link>
+                                        <Link to='/' className={`${Cs}`}>Home</Link>
+                                        <Link to='/team' className={`${Cs}`}>Team</Link>
+                                        <Link to='/plan' className={`${Cs}`}>Investment Plans</Link>
+                                        <Link to='/contact' className={`${Cs}`}>Contact Us</Link>
+                                        <Link to='/login' className={`${Cs}`}>Login</Link>
+                                        <Link to='/register' className={`${Cs} border border-blue-300 w-20 rounded-xl text-center h-10 py-2 shadow-md transition duration-300 ease-in-out transform hover:scale-105`}>Sign Up</Link>
                                     </div>
                                     <div className="text-4xl text-blue-800 lg:hidden cursor-pointer"> <FaBars className='' onClick={() => handleView(!view)} /> </div>
                                 </div>
                             </div>
                         </div>
                     </div><br /><br /><br /><br />
-                    <div className="lg:flex items-start mx-5 my-7 justify-between">
+                    <div className="lg:flex items-start mx-5 my-20 justify-between">
                         <div className="">
                             <div className="lg:text-[3rem] text-4xl mb- leading-tight text-[#fff]">Invest In Bitcoin. <br /> <span className=' '>Bitcoin Trading.</span></div>
                             <div className="lg:text-[3rem] text-4xl mb-8 leading-tight text-[#fff]"><span className=' text-cyan-400 '>Helps In, <br /> {typeEffect} <Cursor /> </span></div>
@@ -245,28 +248,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="">
-                    <div className="bg-gray-100 flex items-center justify-center mt-10">
-                        <div className="lg:flex items-center justify-center mx-10 my-6 gap-10 grid md:grid-cols-2">
-                            {team.map((item, i) => (
-                                <div key={i} className="bg-white rounded-xl flex text-center items-start justify-center my-5 w-[16rem] py-4 h-[20rem] shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
-                                    <div className="">
-                                        <div className=" w-32 h-32 mb-6"> <img src={item.icon} alt="" className="rounded-full " /> </div>
-                                        <div className="text-center mb-5">
-                                            <h1 className="text-xl text-center"> {item.name} </h1>
-                                            <p className="text-sm text-center mb-3"> {item.title} </p>
-                                        </div>
-                                        <div className="flex items-center justify-center gap-4">
-                                            <Link to='' className="text-3xl bg-gray-300 p-2 hover:bg-gradient-to-r text-white from-blue-800 to-cyan-200 rounded-full"> <FaFacebook /> </Link>
-                                            <Link to='' className="text-3xl bg-gray-300 p-2 hover:bg-gradient-to-r text-white from-blue-800 to-cyan-200 rounded-full"> <FaInstagram /> </Link>
-                                            <Link to='' className="text-3xl bg-gray-300 p-2 hover:bg-gradient-to-r text-white from-blue-800 to-cyan-200 rounded-full"> <FaTwitter /> </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
         </Layouts>
