@@ -144,12 +144,12 @@ const Home = () => {
                                 <div className="flex items-center z-50 justify-between mx-10 py-5">
                                     <Link to='/' className=''> <img src={logo} alt="" className="lg:w-[12rem] w-32 " /> </Link>
                                     <div className="lg:flex hidden gap-5">
-                                        <Link to='/' className={`${Cs}`}>Home</Link>
-                                        <Link to='/team' className={`${Cs}`}>Team</Link>
-                                        <Link to='/plan' className={`${Cs}`}>Investment Plans</Link>
-                                        <Link to='/contact' className={`${Cs}`}>Contact Us</Link>
-                                        <Link to='/login' className={`${Cs}`}>Login</Link>
-                                        <Link to='/register' className={`${Cs} border border-blue-300 w-20 rounded-xl text-center h-10 py-2 shadow-md transition duration-300 ease-in-out transform hover:scale-105`}>Sign Up</Link>
+                                        <Link onClick={() => scrollTo(0, 0)} to='/' className={`${Cs}`}>Home</Link>
+                                        <Link onClick={() => scrollTo(0, 0)} to='/team' className={`${Cs}`}>Team</Link>
+                                        <Link onClick={() => scrollTo(0, 0)} to='/plan' className={`${Cs}`}>Investment Plans</Link>
+                                        <Link onClick={() => scrollTo(0, 0)} to='/contact' className={`${Cs}`}>Contact Us</Link>
+                                        <Link onClick={() => scrollTo(0, 0)} to='/login' className={`${Cs}`}>Login</Link>
+                                        <Link onClick={() => scrollTo(0, 0)} to='/register' className={`${Cs} border border-blue-300 w-20 rounded-xl text-center h-10 py-2 shadow-md transition duration-300 ease-in-out transform hover:scale-105`}>Sign Up</Link>
                                     </div>
                                     <div className="text-4xl text-blue-800 lg:hidden cursor-pointer"> <FaBars className='' onClick={() => handleView(!view)} /> </div>
                                 </div>
@@ -162,7 +162,7 @@ const Home = () => {
                             <div className="lg:text-[3rem] text-4xl mb-8 leading-tight text-[#fff]"><span className=' text-cyan-400 '>Helps In, <br /> {typeEffect} <Cursor /> </span></div>
                             <p className="lg:text-xl text-gray-100">Use modern progressive technologies of Bitcoin to earn money</p>
                             <div className="lg:flex items-center md:flex xl:flex  justify-start mt-10 gap-3">
-                                <input type="email" placeholder='Enter your email address' className=' outline-none border rounded-full mb-2 lg:mb-0 py-4 px-5 w-[20rem] shadow-md transition duration-300 ease-in-out transform hover:scale-105' />
+                                <input type="email" placeholder=' Email address' className=' outline-none border rounded-full mb-2 lg:mb-0 py-4 px-5 lg:w-[20rem] w-[15rem] shadow-md' />
                                 <div className="border py-4 w-[10rem] text-center text-white font-semibold rounded-full bg-gradient-to-l from-cyan-500 to-blue-500 shadow-md transition duration-300 ease-in-out transform hover:scale-105">Get Started</div>
                             </div>
                         </div>
@@ -192,7 +192,7 @@ const Home = () => {
                             <div className="">
                                 <div className="lg:flex items-center justify-center mx-10 my-6 gap-3 grid md:grid-cols-2">
                                     {links.map((item, i) => (
-                                        <div key={i} className="bg-white over:bg-blue-700 mt-5 w-[22rem] rounded-lg py-4 h-[24rem] border border-blue-500 shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                                        <div key={i} className="bg-white over:bg-blue-700 mt-5 lg:w-[22rem] rounded-lg py-4 h-[24rem] border border-blue-500 shadow-md transition duration-300 ease-in-out transform hover:scale-105">
                                             <div className="text-cyan-900">
                                                 <div className="text-6xl flex items-center justify-center py-3 "> {item.icon} </div>
                                                 <div className="">
@@ -209,7 +209,7 @@ const Home = () => {
                 </div>
                 <div className="bg-gray-100 mb-10 pb-24">
                     <div className="text-center mx-5 py-10 pt-20">
-                        <div className="text-cyan-900 text-6xl my-3">Get Started With Bitcoin</div>
+                        <div className="text-cyan-900 lg:text-6xl text-3xl my-3">Get Started With Bitcoin</div>
                         <p className=" text-xl text-zinc-400">Start learning about Bitcoin with interactive tutorials. It’s fun, easy, and takes only a few minutes!</p>
                     </div>
                     <div className="mt-16 hidden">
@@ -219,7 +219,7 @@ const Home = () => {
                     <div className="">
                         <div className="lg:flex items-center justify-center mx-10 my-6 gap-10 grid md:grid-cols-2">
                             {start.map((item, i) => (
-                                <div key={i} className="bg-white over:bg-blue-700 rounded-xl mt-5 w-[20rem] py-4 h-[21rem] shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                                <div key={i} className="bg-white over:bg-blue-700 rounded-xl mt-5 lg:w-[20rem] py-4 h-[21rem] shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
                                     <div className="text-cyan-900 ">
                                         <div className="flex items-center my-5 justify-center"><img src={item.icon} alt="" className="w-16" /></div>
                                         <div className="">

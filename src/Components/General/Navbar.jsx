@@ -19,13 +19,13 @@ const Navbar = ({ closeView }) => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 leading-10 track gap-4 text-white">
-                    <Link to="/" className="font-semibold ml-5 text-cyan-200 text-xl">Home</Link>
-                    <Link to="/team" className="font-semibold ml-5 text-xl">Team</Link>
-                    <Link to="/plan" className="font-semibold ml-5 text-xl">Investment Plans</Link>
-                    <Link to="/contact" className="font-semibold ml-5 text-xl">Contact Us</Link>
+                    <Link onClick={() => scrollTo(0, 0)} to="/" className="font-semibold ml-5 text-cyan-200 text-xl">Home</Link>
+                    <Link onClick={() => scrollTo(0, 0)} to="/team" className="font-semibold ml-5 text-xl">Team</Link>
+                    <Link onClick={() => scrollTo(0, 0)} to="/plan" className="font-semibold ml-5 text-xl">Investment Plans</Link>
+                    <Link onClick={() => scrollTo(0, 0)} to="/contact" className="font-semibold ml-5 text-xl">Contact Us</Link>
                     <div className="flex items-center mt-6 justify-center">
-                        <Link to="/register" className="ml-5 border px-6 py-1.5 text-xl w-32 text-center rounded-full">Sign Up</Link>
-                        <Link to="/login" className="ml-5 border px-6 py-1.5 text-xl w-32 text-center rounded-full">Log In</Link>
+                        <Link onClick={() => scrollTo(0, 0)} to="/register" className="ml-5 border px-6 py-1.5 text-xl w-32 text-center rounded-full">Sign Up</Link>
+                        <Link onClick={() => scrollTo(0, 0)} to="/login" className="ml-5 border px-6 py-1.5 text-xl w-32 text-center rounded-full">Log In</Link>
                     </div>
                 </div>
             </div>

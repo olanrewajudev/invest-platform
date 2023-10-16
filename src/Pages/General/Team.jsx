@@ -69,12 +69,12 @@ const Team = () => {
               <div className="flex items-center z-50 justify-between mx-10 py-5">
                 <Link to='/' className=''> <img src={logo} alt="" className="lg:w-[12rem] w-32 " /> </Link>
                 <div className="lg:flex hidden gap-5">
-                  <Link to='/' className={`${Cs}`}>Home</Link>
-                  <Link to='/team' className={`${Cs}`}>Team</Link>
-                  <Link to='/plan' className={`${Cs}`}>Investment Plans</Link>
-                  <Link to='/contact' className={`${Cs}`}>Contact Us</Link>
-                  <Link to='/login' className={`${Cs}`}>Login</Link>
-                  <Link to='/register' className={`${Cs} border border-blue-300 w-20 rounded-xl text-center h-10 py-2 shadow-md transition duration-300 ease-in-out transform hover:scale-105`}>Sign Up</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/' className={`${Cs}`}>Home</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/team' className={`${Cs}`}>Team</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/plan' className={`${Cs}`}>Investment Plans</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/contact' className={`${Cs}`}>Contact Us</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/login' className={`${Cs}`}>Login</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/register' className={`${Cs} border border-blue-300 w-20 rounded-xl text-center h-10 py-2 shadow-md transition duration-300 ease-in-out transform hover:scale-105`}>Sign Up</Link>
                 </div>
                 <div className="text-4xl text-blue-800 lg:hidden cursor-pointer"> <FaBars className='' onClick={() => handleView(!view)} /> </div>
               </div>

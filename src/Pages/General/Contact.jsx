@@ -59,12 +59,12 @@ const Contact = () => {
               <div className="flex items-center z-50 justify-between mx-10 py-5">
                 <Link to='/' className=''> <img src={logo} alt="" className="lg:w-[12rem] w-32 " /> </Link>
                 <div className="lg:flex hidden gap-5">
-                  <Link to='/' className={`${Cs}`}>Home</Link>
-                  <Link to='/team' className={`${Cs}`}>Team</Link>
-                  <Link to='/plan' className={`${Cs}`}>Investment Plans</Link>
-                  <Link to='/contact' className={`${Cs}`}>Contact Us</Link>
-                  <Link to='/login' className={`${Cs}`}>Login</Link>
-                  <Link to='/register' className={`${Cs} border border-blue-300 w-20 rounded-xl text-center h-10 py-2 shadow-md transition duration-300 ease-in-out transform hover:scale-105`}>Sign Up</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/' className={`${Cs}`}>Home</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/team' className={`${Cs}`}>Team</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/plan' className={`${Cs}`}>Investment Plans</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/contact' className={`${Cs}`}>Contact Us</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/login' className={`${Cs}`}>Login</Link>
+                  <Link onClick={() => scrollTo(0, 0)} to='/register' className={`${Cs} border border-blue-300 w-20 rounded-xl text-center h-10 py-2 shadow-md transition duration-300 ease-in-out transform hover:scale-105`}>Sign Up</Link>
                 </div>
                 <div className="text-4xl text-blue-800 lg:hidden cursor-pointer"> <FaBars className='' onClick={() => handleView(!view)} /> </div>
               </div>
@@ -93,13 +93,13 @@ const Contact = () => {
           </div>
         </div>
         <div className="bg-gray-100 py-20">
-          <div className="lg:flex items-start gap-10 justify-between mx-20">
+          <div className="lg:flex items-start gap-10 justify-between mx-10">
             <div className="">
               <h1 className="mb-7 text-2xl font-semibold ">Our 24/5 multilingual customer support team, is ready to provide you with an unsurpassed level of support!</h1>
               <p className="">The [sitename] support team comprises of industry professionals who are available to help clients round the clock. Our clients are of paramount importance, which is why everything we do is always with the goal of improving their overall experience.</p>
               <div className="mt-16">Email Us Directly @: support@example.com</div>
             </div>
-            <div className="my-10 lg:my-0 px-10  rounded-xl flex items-center justify-center py-10 bg-gradient-to-r from-blue-800 to-cyan-500">
+            <div className="w-full px-6 rounded-xl flex items-center justify-center py-10 bg-gradient-to-r from-blue-800 to-cyan-500">
               <form onSubmit={handleSubmit}>
                 <div className="">
                   <h1 className="mb-2 text-white">Enter Your Email Address</h1>
